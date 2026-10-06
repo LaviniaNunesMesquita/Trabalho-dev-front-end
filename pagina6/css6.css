@@ -1,0 +1,44 @@
+
+html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .pai{
+        flex: 1;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: aqua;
+        overflow: hidden;
+    }
+
+    .cabecalho{
+        flex: 1;
+        width: 100vw;
+        height: 100px;
+        background-color: rgb(56, 6, 27);
+
+    }
+
+    .layout{
+        min-width: 100px;
+        display: grid;
+
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 80px 1fr;
+    }
+
+    .barra-lateral{
+        flex: 1;
+        width: 100px;
+        height: 100vh;
+        background-color:rgb(255, 0, 106);
+        display: flex
+    }
+
+    .p{
+        color:aliceblue;
+    }
