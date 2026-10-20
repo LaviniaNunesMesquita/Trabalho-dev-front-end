@@ -1,0 +1,217 @@
+/* Cores e fontes gerais da pagina toda*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #543295;
+}
+/* Logo e nome da empresa no menu */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+/* Menu superior */
+header {
+    background-color: #543295;
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+}
+/* Formatação dos ícones do menu */
+nav img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+/*Texto clicavél dentro do menu */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/*Efeito do mouse sobre o Texto clicavél dentro do menu */
+nav a:hover {
+    color: #f4c24c;
+}
+
+/* Parte principal */
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 55px 5%;
+}
+
+.texto-principal {
+    width: 55%;
+}
+
+.destaque {
+    color:  #543295;;
+    font-weight: bold;
+}
+
+h1 {
+    color: #3d296a;
+    font-size: 42px;
+}
+
+.texto-principal p {
+    line-height: 1.6;
+}
+
+/* Espaço reservado para a imagem */
+.imagem-principal {
+    width: 40%;
+    min-height: 250px;
+    background-color: #f2edfc;
+   
+}
+
+/* formatação dos botões da pagina  */
+.botao, .botao-secundario {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 8px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+/*botões 'Acompanhar atendimentos'*/
+.botao {
+    background-color:#543295;
+    color: white;
+}
+/*efeito do mouse em cima do botão*/
+.botao:hover {
+    background-color: #3d296a;
+}
+/*botão 'ver serviços'*/
+.botao-secundario {
+    color: #3d296a;
+    border: 1px solid #3d296a;
+}
+
+/* Benefícios */
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 5%;
+}
+
+.beneficio {
+    width: 25%;
+    border-right: 1px solid white;
+    padding-right: 12px;
+}
+
+.beneficio h3 {
+    font-size: 16px;
+}
+
+.beneficio p {
+    color: #3d296a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Serviços caixa roxa*/
+.servicos {
+    margin: 20px 5%;
+    padding: 25px;
+    background-color: #d6c0fd;
+    border-radius: 12px;
+}
+
+.lista-servicos {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.servico {
+    flex: 1;
+    min-height: 90px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Seção de atendimento */
+.ajuda {
+    padding: 30px 5%;
+    text-align: center;
+}
+
+/* Rodapé da página*/
+footer {
+    background-color: #3d296a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ajustes para telas de celular e dispositivos movéis*/
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    .texto-principal, .imagem-principal {
+        width: 100%;
+    }
+
+    .beneficios {
+        flex-wrap: wrap;
+    }
+
+    .beneficio {
+        width: 40%;
+    }
+
+    .lista-servicos {
+        flex-wrap: wrap;
+    }
+
+    .servico {
+        min-width: 120px;
+    }
+}
