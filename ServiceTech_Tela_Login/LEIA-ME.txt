@@ -1,0 +1,25 @@
+SERVICETECH — TELA DE LOGIN
+
+ARQUIVOS
+- index.html: estrutura da página e campos.
+- style.css: cores, boxes, alinhamento, tamanhos e efeitos de mouse.
+- script.js: carrega os dados JSON e faz os botões/formulário funcionarem.
+- dados.json: textos e benefícios exibidos na tela.
+
+COMO EXECUTAR
+1. Extraia todos os arquivos para a mesma pasta.
+2. Abra a pasta no Visual Studio Code.
+3. Instale a extensão "Live Server", caso ainda não tenha.
+4. Clique com o botão direito em index.html e escolha "Open with Live Server".
+O arquivo JSON é carregado com fetch; por isso, não abra apenas dando dois cliques no HTML.
+
+O QUE FUNCIONA
+- Campos de e-mail e senha.
+- Botão para mostrar/esconder a senha.
+- Botão Entrar com mensagem de demonstração.
+- Efeito de cor ao passar o mouse no botão.
+- Textos e benefícios carregados de dados.json.
+- Último e-mail de teste guardado no localStorage do navegador.
+
+IMPORTANTE
+A tela não autentica usuários reais. Para login real, precisa de backend/servidor que valide as credenciais. Nunca guarde senhas em JSON ou localStorage.

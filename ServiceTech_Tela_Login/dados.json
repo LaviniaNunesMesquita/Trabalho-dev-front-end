@@ -1,0 +1,12 @@
+{
+  "subtitulo": "Gestão inteligente para sua assistência técnica",
+  "titulo": "Acesso do Administrador",
+  "descricao": "Entre com suas credenciais para continuar",
+  "textoBotao": "Entrar",
+  "beneficios": [
+    { "simbolo": "♢", "texto": "Mais controle nos atendimentos" },
+    { "simbolo": "ϟ", "texto": "Processos mais rápidos" },
+    { "simbolo": "♙", "texto": "Clientes mais satisfeitos" },
+    { "simbolo": "⚙", "texto": "Tudo em um só lugar" }
+  ]
+}
