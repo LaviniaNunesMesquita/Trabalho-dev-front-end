@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #3d296a;
+    background-color: #f7f5fc;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.layout2 {
+    display: flex;
+    flex: 1;
+}
+
+.cabecalho {
+    background-color: #543295;
+    color: white;
+    height: 65px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icone-perfil {
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    color: #543295;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icone-perfil svg,
+.icone-topo-btn svg,
+.item-lateral svg {
+    width: 22px;
+    height: 22px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo h2 span {
+    color: #f4c24c;
+}
+
+.acoes-topo {
+    display: flex;
+    gap: 12px;
+}
+
+.icone-topo-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral {
+    width: 70px;
+    background-color: white;
+    border-right: 1px solid #e5dff5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+}
+
+.item-lateral {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: #3d296a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.item-lateral:hover {
+    background-color: #f2edfc;
+}
+
+.item-lateral.ativo {
+    background-color: #543295;
+    color: white;
+}
+
+.pai {
+    flex: 1;
+    padding: 24px;
+}
+
+.card-central {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #e5dff5;
+}
+
+.topo-secao {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.icone-secao {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ebe2fe;
+    color: #3d296a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-secao svg {
+    width: 26px;
+    height: 26px;
+    transform: scaleX(-1);
+}
+
+.topo-secao h1 {
+    font-size: 22px;
+    color: #3d296a;
+}
+
+.barra-controles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filtro-btn {
+    padding: 8px 14px;
+    border: 1px solid #d6c0fd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    color: #543295;
+}
+
+.pesquisa {
+    padding: 8px 12px;
+    border: 1px solid #d6c0fd;
+    border-radius: 8px;
+    min-width: 240px;
+    outline: none;
+}
+
+input[name="filtro"] {
+    display: none;
+}
+
+#f-todos:checked ~ .barra-controles label[for="f-todos"],
+#f-recebido:checked ~ .barra-controles label[for="f-recebido"],
+#f-analise:checked ~ .barra-controles label[for="f-analise"],
+#f-manutencao:checked ~ .barra-controles label[for="f-manutencao"],
+#f-pronto:checked ~ .barra-controles label[for="f-pronto"] {
+    background-color: #543295;
+    border-color: #543295;
+    color: white;
+}
+
+#f-recebido:checked ~ .tabela tbody tr:not(.item-recebido),
+#f-analise:checked ~ .tabela tbody tr:not(.item-analise),
+#f-manutencao:checked ~ .tabela tbody tr:not(.item-manutencao),
+#f-pronto:checked ~ .tabela tbody tr:not(.item-pronto) {
+    display: none;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabela thead {
+    background-color: #f2edfc;
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #f2edfc;
+}
+
+.recebido   { color: #f4c24c; font-weight: bold; }
+.analise    { color: #543295; font-weight: bold; }
+.manutencao { color: #fe7f28; font-weight: bold; }
+.pronto     { color: #12bc59; font-weight: bold; }
+
+@media (max-width: 700px) {
+    .layout2 { flex-direction: column; }
+    .barra-lateral { width: 100%; flex-direction: row; justify-content: center; padding: 10px; }
+    .tabela { display: block; overflow-x: auto; }
+}

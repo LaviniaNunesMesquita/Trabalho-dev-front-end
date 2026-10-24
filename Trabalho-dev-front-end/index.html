@@ -1,0 +1,142 @@
+<html>
+    <!--
+    Projeto: Página inicial do sistema da assistência tecnica ServiceTech
+    
+    Autor: LIVIA RIBEIRO FREIXO
+    Data: 20/10/2026 
+    Curso: Ciências da Computação
+    Instituição: UNIVERSIDADE BRAZ CUBAS
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title>ServiceTech</title>
+        <link rel="stylesheet" href="css/tela-inicial.css">
+    </head>
+
+    <body>
+
+        <!-- MENU DA PAGINA INICIAL -------------------------------------------------------------------------------------------------------------------------------------
+         (favor add link referencia no href refrente a pagina de atendimentos e a de Login)
+         --->
+        <header>
+    <div class="logo">
+        <h2>ServiceTech</h2>
+        <img src="img/logo.jpg" alt="Logo ServiceTech">
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+        <img src="img/inicio.png" alt=""> Início</a>
+       
+        <a href="painel-controle/painel-controle.html">
+        <img src="img/atendimento.png" alt=""> Meus Atendimentos</a>
+
+
+        <a href="#servicos">
+            <img src="img/sobre.png" alt="">Sobre Nós</a>
+
+        <a href="login/login.html">
+            <img src="img/login.png" alt="">Login</a>
+           
+    </nav>
+        </header>
+        
+        <!-- Corpo da página ----------------------------------------------------------------------------------------------------------------------------------------
+         (favor add link referencia no href refrente a página de atendimentos para que o botão funcione)
+        -->
+        
+        <main>
+            <section class="principal">
+                <div class="texto-principal">
+                    <p class="destaque">Assistência Técnica Especializada</p>
+                    <h1>Seu aparelho em boas mãos!</h1>
+                    <p>
+                        Aqui na ServiceTech, cuidamos do seu notebook, celular,
+                        computador e muito mais. Nosso objetivo é oferecer um
+                        atendimento rápido, seguro e transparente.
+                    </p>
+                <!--Botão dentro dsa pagina que redireciona a pagina de Atendimentos-->
+                    <a class="botao" href="registro-status/registro-status.html">Acompanhe seu atendimento</a>
+
+                <!--Botão redireciona usuário para texto dentro da pagina-->
+                    <a class="botao-secundario" href="#servicos">Ver serviços</a>
+                </div>
+
+                <!-- imagem principal -->
+                <div class="imagem-principal">
+                    <img src="img/imagem_principal.png" alt="Aparelhos eletrônicos">
+                    
+                </div>
+            </section>
+
+            <!--Texto Benefícios da ServiceTech------------------------------------------------------------------------------------------------------------------------------->
+            <section class="beneficios">
+                <div class="beneficio">
+                    <h3>Mais segurança</h3>
+                    <p>Seus dados e aparelhos sempre protegidos.</p>
+                </div>
+
+                <div class="beneficio">
+                    <h3>Agilidade</h3>
+                    <p>Atendimento rápido e eficiente.</p>
+                </div>
+
+                <div class="beneficio">
+                    <h3>Profissionais qualificados</h3>
+                    <p>Equipe técnica especializada.</p>
+                </div>
+
+                <div class="beneficio">
+                    <h3>Suporte dedicado</h3>
+                    <p>Estamos aqui para te ajudar.</p>
+                </div>
+            </section>
+
+            <!-- Texto Serviços oferecidos----------------------------------------------------------------------------------------------------------------------------->
+            <section class="servicos" id="servicos">
+                <h2>Nossos serviços</h2>
+
+                <div class="lista-servicos">
+                    <div class="servico">
+                        <!-- Adicione uma imagem de troca de tela aqui -->
+                        <p>Troca de tela</p>
+                    </div>
+
+                    <div class="servico">
+                        <!-- Adicione uma imagem de troca de bateria aqui -->
+                        <p>Troca de bateria</p>
+                    </div>
+
+                    <div class="servico">
+                        <!-- Adicione uma imagem de formatação aqui -->
+                        <p>Formatação</p>
+                    </div>
+
+                    <div class="servico">
+                        <!-- Adicione uma imagem de limpeza aqui -->
+                        <p>Limpeza</p>
+                    </div>
+
+                    <div class="servico">
+                        <!-- Adicione uma imagem de upgrade aqui -->
+                        <p>Upgrade</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Texto Chamada para atendimento----------------------------------------------------------------------------------------------------------->
+            <section class="ajuda">
+                <h2>Precisa de ajuda com seu aparelho?</h2>
+                <p>Entre em contato com nossa equipe ou consulte seus atendimentos.</p>
+                <a class="botao" href="">Acompanhar atendimento</a>
+            </section>
+        </main>
+
+        <!-- Rodapé da página ----------------------------------------------------------------------------------------------------------------------------------->
+        <footer>
+            <p>Qualidade | Confiança | ServiceTech</p>
+        </footer>
+
+    </body>
+</html>

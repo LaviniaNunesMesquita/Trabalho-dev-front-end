@@ -1,0 +1,83 @@
+[
+  {
+    "id": "#001",
+    "cliente": "Mariana",
+    "aparelho": "Notebook Dell",
+    "servico": "Diagnóstico",
+    "status": "Recebido",
+    "classe": "recebido",
+    "data": "21/09/2026"
+  },
+  {
+    "id": "#002",
+    "cliente": "Ana",
+    "aparelho": "Galaxy A52",
+    "servico": "Troca de tela",
+    "status": "Em análise",
+    "classe": "analise",
+    "data": "21/09/2026"
+  },
+  {
+    "id": "#003",
+    "cliente": "Gabriel",
+    "aparelho": "MacBook Air",
+    "servico": "Formatação",
+    "status": "Em manutenção",
+    "classe": "manutencao",
+    "data": "21/09/2026"
+  },
+  {
+    "id": "#004",
+    "cliente": "Júlia",
+    "aparelho": "Samsung S21",
+    "servico": "Troca de bateria",
+    "status": "Pronto",
+    "classe": "pronto",
+    "data": "21/09/2026"
+  },
+  {
+    "id": "#005",
+    "cliente": "João",
+    "aparelho": "iPhone 13",
+    "servico": "Diagnóstico",
+    "status": "Recebido",
+    "classe": "recebido",
+    "data": "22/09/2026"
+  },
+  {
+    "id": "#006",
+    "cliente": "Pedro",
+    "aparelho": "Notebook Lenovo",
+    "servico": "Limpeza",
+    "status": "Em análise",
+    "classe": "analise",
+    "data": "22/09/2026"
+  },
+  {
+    "id": "#007",
+    "cliente": "Beatriz",
+    "aparelho": "iPhone 11",
+    "servico": "Troca de tela",
+    "status": "Em manutenção",
+    "classe": "manutencao",
+    "data": "22/09/2026"
+  },
+  {
+    "id": "#008",
+    "cliente": "Carlos",
+    "aparelho": "PC Gamer",
+    "servico": "Upgrade",
+    "status": "Recebido",
+    "classe": "recebido",
+    "data": "23/09/2026"
+  },
+  {
+    "id": "#009",
+    "cliente": "Matheus",
+    "aparelho": "Notebook Asus",
+    "servico": "Formatação",
+    "status": "Pronto",
+    "classe": "pronto",
+    "data": "22/09/2026"
+  }
+]

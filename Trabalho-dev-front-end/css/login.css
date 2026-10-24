@@ -1,0 +1,559 @@
+
+/* CORES OFICIAIS DO SERVICETECH */
+:root {
+    --roxo: #543295;
+    --roxo-escuro: #3d296a;
+    --amarelo: #f4c24c;
+    --amarelo-claro: #f3d492;
+    --verde-claro: #aff0c6;
+    --verde: #12bc59;
+    --lilas: #d6c0fd;
+    --pessego: #fdc49b;
+}
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--roxo-escuro);
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* CAIXA PRINCIPAL DA PÁGINA */
+.pagina {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    width: calc(100% - 40px);
+    max-width: 1300px;
+    min-height: 720px;
+    margin: 20px auto;
+    padding: 60px 6%;
+    overflow: hidden;
+    background: #faf9ff;
+}
+
+/* LOGOTIPO */
+.apresentacao {
+    width: 53%;
+    max-width: 560px;
+    z-index: 1;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icone-marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 65px;
+    border: 4px solid var(--roxo);
+    border-bottom: 7px solid var(--amarelo);
+    border-radius: 8px;
+    background: white;
+    font-size: 30px;
+}
+
+.marca h1 {
+    margin: 0;
+    color: var(--roxo-escuro);
+    font-size: 42px;
+}
+
+.marca h1 span {
+    color: var(--amarelo);
+}
+
+.marca p {
+    margin: 5px 0 0;
+    color: #77728f;
+    font-size: 13px;
+}
+
+
+/* ILUSTRAÇÃO DOS EQUIPAMENTOS */
+
+.ilustracao {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #f0eafa;
+}
+
+.equipamentos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 190px;
+}
+
+/* NOTEBOOK */
+
+.notebook {
+    position: absolute;
+    left: 12%;
+    bottom: 20px;
+    z-index: 1;
+    width: 220px;
+}
+
+.tela-notebook {
+    position: relative;
+    height: 125px;
+    border: 9px solid var(--roxo-escuro);
+    border-radius: 12px 12px 5px 5px;
+    background: linear-gradient(
+        135deg,
+        #6745ad,
+        var(--roxo),
+        var(--roxo-escuro)
+    );
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.12);
+    transform: skew(-5deg);
+}
+
+.base-notebook {
+    height: 14px;
+    margin: 0 -14px;
+    border-radius: 3px 3px 12px 12px;
+    background: var(--roxo-escuro);
+}
+
+.base-notebook::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: auto;
+    border-radius: 0 0 5px 5px;
+    background: #654b93;
+}
+
+/* CELULAR MAIS PRÓXIMO DO NOTEBOOK */
+
+.celular {
+    position: absolute;
+    right: 19%;
+    bottom: 20px;
+    z-index: 2;
+    width: 66px;
+    height: 135px;
+    border: 6px solid var(--roxo-escuro);
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        #6542a4,
+        var(--roxo)
+    );
+    box-shadow: 0 0 0 3px var(--lilas);
+}
+
+.celular::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 20px;
+    height: 4px;
+    border-radius: 5px;
+    background: var(--roxo-escuro);
+    transform: translateX(-50%);
+}
+
+/* ENGRENAGEM NA FRENTE DOS EQUIPAMENTOS */
+
+.engrenagem {
+    position: absolute;
+    left: 42%;
+    bottom: 28px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 105px;
+    border: 11px solid var(--amarelo);
+    border-radius: 50%;
+    background: var(--roxo);
+    box-shadow: 0 5px 12px rgba(61, 41, 106, 0.2);
+    font-size: 42px;
+}
+
+/* PLANTA DECORATIVA */
+
+.planta {
+    position: absolute;
+    left: 4%;
+    bottom: 25px;
+    z-index: 2;
+    color: var(--roxo);
+    font-size: 52px;
+}
+
+.planta::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    width: 32px;
+    height: 13px;
+    border-bottom: 3px solid var(--roxo);
+    border-radius: 0 0 10px 10px;
+    background: white;
+}
+
+/* SÍMBOLO DE SEGURANÇA */
+
+.selo {
+    position: absolute;
+    top: 18px;
+    right: 7%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 50px;
+    border: 2px solid var(--lilas);
+    color: var(--roxo);
+    background: rgba(255, 255, 255, 0.35);
+    font-size: 27px;
+}
+
+/* CAIXINHAS DE BENEFÍCIOS */
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: center;
+}
+
+.beneficio {
+    flex: 1;
+    padding: 10px 5px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+/* A caixa muda de cor quando o mouse passa sobre ela */
+.beneficio:hover {
+    background: var(--lilas);
+    transform: translateY(-3px);
+}
+
+.beneficio .simbolo {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--amarelo);
+    font-size: 27px;
+}
+
+.beneficio p {
+    margin: 0;
+    color: var(--roxo-escuro);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ÁREA DO LOGIN */
+.area-login {
+    display: flex;
+    justify-content: center;
+    width: 42%;
+    z-index: 1;
+}
+
+/* CAIXA BRANCA DO FORMULÁRIO */
+.cartao-login {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border: 1px solid var(--lilas);
+    border-radius: 14px;
+    background: white;
+    box-shadow: 0 5px 20px rgba(61, 41, 106, 0.10);
+    text-align: center;
+}
+
+.icone-seguranca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    border: 3px solid var(--roxo);
+    border-radius: 50%;
+    color: var(--roxo);
+    font-size: 30px;
+}
+
+.cartao-login h2 {
+    margin: 0 0 10px;
+    color: var(--roxo-escuro);
+    font-size: 23px;
+}
+
+.cartao-login > p {
+    margin: 0 0 28px;
+    color: #77728f;
+    font-size: 13px;
+}
+
+/* CAMPOS DE E-MAIL E SENHA */
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 0 12px;
+    border: 1px solid #ded8e9;
+    border-radius: 8px;
+    background: white;
+    transition: 0.2s;
+}
+
+/* A borda muda quando o campo está selecionado */
+.campo:focus-within {
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 3px #f0eafa;
+}
+
+.icone-campo {
+    color: var(--roxo);
+    font-size: 20px;
+}
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    color: var(--roxo-escuro);
+    background: transparent;
+}
+
+.campo input::placeholder {
+    color: #8b879e;
+}
+
+/* BOTÃO PARA MOSTRAR A SENHA */
+.mostrar-senha {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: var(--roxo);
+    background: white;
+    font-size: 18px;
+}
+
+.mostrar-senha:hover {
+    background: var(--amarelo-claro);
+}
+
+/* BOTÃO ENTRAR */
+.botao-entrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 46px;
+    margin-top: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: var(--roxo);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* O botão fica amarelo ao passar o mouse */
+.botao-entrar:hover {
+    color: var(--roxo-escuro);
+    background: var(--amarelo);
+    transform: translateY(-2px);
+}
+
+.botao-entrar:active {
+    transform: translateY(0);
+}
+
+.seta {
+    font-size: 22px;
+}
+
+/* MENSAGENS DE RESPOSTA DO LOGIN */
+.mensagem {
+    min-height: 18px;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.mensagem.erro {
+    padding: 8px;
+    border-radius: 6px;
+    color: var(--roxo-escuro);
+    background: var(--pessego);
+}
+
+.mensagem.sucesso {
+    padding: 8px;
+    border-radius: 6px;
+    color: var(--roxo-escuro);
+    background: var(--verde-claro);
+}
+
+/* RODAPÉ */
+footer {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9992a8;
+    font-size: 11px;
+}
+
+footer strong {
+    color: var(--roxo);
+}
+
+/* DECORAÇÕES ROXAS NOS CANTOS */
+.decoracao {
+    position: absolute;
+    width: 150px;
+    height: 130px;
+    background: var(--roxo);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.decoracao-topo {
+    top: -65px;
+    right: -35px;
+    border-radius: 0 0 0 100%;
+}
+
+.decoracao-baixo {
+    bottom: -80px;
+    left: -40px;
+    border-radius: 0 100% 0 0;
+}
+
+/* ADAPTAÇÃO PARA TELAS MENORES */
+@media (max-width: 900px) {
+    .pagina {
+        flex-direction: column;
+        padding: 40px 6% 70px;
+        gap: 30px;
+    }
+
+    .apresentacao,
+    .area-login {
+        width: 100%;
+        max-width: 560px;
+    }
+
+    .ilustracao {
+        height: 220px;
+    }
+
+    footer {
+        right: 10px;
+        left: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagina {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+        padding: 30px 16px 70px;
+    }
+
+    .marca h1 {
+        font-size: 30px;
+    }
+
+    .icone-marca {
+        width: 58px;
+        height: 55px;
+        font-size: 25px;
+    }
+
+    .marca p {
+        font-size: 11px;
+    }
+
+    .notebook {
+        left: 10%;
+        width: 145px;
+    }
+
+    .tela-notebook {
+        height: 90px;
+    }
+
+    .celular {
+        right: 8%;
+        width: 48px;
+        height: 105px;
+    }
+
+    .engrenagem {
+        width: 75px;
+        height: 75px;
+        font-size: 28px;
+    }
+
+    .cartao-login {
+        padding: 25px 18px;
+    }
+
+    .cartao-login h2 {
+        font-size: 20px;
+    }
+
+    .beneficios {
+        gap: 3px;
+    }
+
+    .beneficio p {
+        font-size: 10px;
+    }
+}

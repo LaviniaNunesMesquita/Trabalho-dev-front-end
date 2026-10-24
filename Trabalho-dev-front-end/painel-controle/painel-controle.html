@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#48228e">
+    <title>ServiceTech | Painel de atendimentos</title>
+    <link rel="stylesheet" href="../css/painel-controle.css">
+</head>
+<body>
+
+    <!-- ===== MENU SUPERIOR ===== -->
+    <header>
+        <div class="logo">
+            <h2>ServiceTech</h2>
+            <img src="../img/logo.jpg" alt="Logo ServiceTech">
+        </div>
+
+        <nav>
+            <a href="../index.html">
+                <img src="../img/inicio.png" alt=""> Início
+            </a>
+            <a href="../painel-controle/painel-controle.html">
+                <img src="../img/atendimento.png" alt=""> Meus Atendimentos
+            </a>
+            <a href="../index.html#servicos">
+                <img src="../img/sobre.png" alt=""> Sobre Nós
+            </a>
+            <a href="../login/login.html">
+                <img src="../img/login.png" alt=""> Login
+            </a>
+        </nav>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main class="main-content" id="dashboard">
+
+        <!-- Cartões de indicadores -->
+        <section class="status">
+            <article class="cartaodestatus">
+                <div class="iconecartaodestatus icone-roxo">icone cartao de status</div>
+                <div>
+                    <strong class="numerocartaodestatus" id="totalAtendimentos">12</strong>
+                    <span class="tabelacartaodestatus">Total de atendimentos</span>
+                </div>
+            </article>
+            <article class="cartaodestatus">
+                <div class="iconecartaodestatus icone-roxo">icone cartao de status</div>
+                <div>
+                    <strong class="numerocartaodestatus" id="totalAnalise">4</strong>
+                    <span class="tabelacartaodestatus">Em análise</span>
+                </div>
+            </article>
+            <article class="cartaodestatus">
+                <div class="iconecartaodestatus icone-amarelo">icone cartao de status</div>
+                <div>
+                    <strong class="numerocartaodestatus" id="totalManutencao">3</strong>
+                    <span class="tabelacartaodestatus">Em manutenção</span>
+                </div>
+            </article>
+            <article class="cartaodestatus">
+                <div class="iconecartaodestatus icone-amarelo">icone cartao de status</div>
+                <div>
+                    <strong class="numerocartaodestatus" id="totalProntos">5</strong>
+                    <span class="tabelacartaodestatus">Prontos</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- Barra de pesquisa + filtro + botão novo -->
+        <section class="barradepesquisa">
+            <label class="campo-pesquisa">
+                <span class="icone" aria-hidden="true">[ícone]</span>
+                <input
+                    class="barradepesquisa-search"
+                    id="pesquisarAtendimento"
+                    type="search"
+                    placeholder="Pesquisar por nome, aparelho ou número do atendimento..."
+                    aria-label="Pesquisar atendimentos"
+                >
+            </label>
+
+            <select id="filtrarStatus" aria-label="Filtrar por status">
+                <option value="todos">Todos os status</option>
+                <option value="recebido">Recebido</option>
+                <option value="analise">Em análise</option>
+                <option value="manutencao">Em manutenção</option>
+                <option value="pronto">Pronto</option>
+            </select>
+
+            <button type="button" class="botao-novo" id="novoAtendimento">
+                <span class="icone" aria-hidden="true">+</span>
+                Novo Atendimento
+            </button>
+        </section>
+
+        <!-- Kanban + painel lateral -->
+        <section class="area-atendimentos">
+
+            <div class="quadro-kanban" id="quadroKanban">
+
+                <section class="coluna-kanban recebido">
+                    <header class="cabecalho-coluna">
+                        <h2><span class="ponto-status"></span>Recebido</h2>
+                        <span class="quantidade-coluna" id="quantidadeRecebido">0 atendimentos</span>
+                    </header>
+                    <div class="lista-atendimentos" id="listaRecebido"></div>
+                </section>
+
+                <section class="coluna-kanban analise">
+                    <header class="cabecalho-coluna">
+                        <h2><span class="ponto-status"></span>Em análise</h2>
+                        <span class="quantidade-coluna" id="quantidadeAnalise">0 atendimentos</span>
+                    </header>
+                    <div class="lista-atendimentos" id="listaAnalise"></div>
+                </section>
+
+                <section class="coluna-kanban manutencao">
+                    <header class="cabecalho-coluna">
+                        <h2><span class="ponto-status"></span>Em manutenção</h2>
+                        <span class="quantidade-coluna" id="quantidadeManutencao">0 atendimentos</span>
+                    </header>
+                    <div class="lista-atendimentos" id="listaManutencao"></div>
+                </section>
+
+                <section class="coluna-kanban pronto">
+                    <header class="cabecalho-coluna">
+                        <h2><span class="ponto-status"></span>Pronto</h2>
+                        <span class="quantidade-coluna" id="quantidadePronto">0 atendimentos</span>
+                    </header>
+                    <div class="lista-atendimentos" id="listaPronto"></div>
+                </section>
+
+            </div>
+
+            <!-- Painel lateral -->
+            <aside class="painel-lateral">
+
+                <section class="cartao-prazos">
+                    <h2>
+                        <span class="icone" aria-hidden="true">[ícone]</span>
+                        Próximos prazos
+                    </h2>
+                    <div class="lista-prazos" id="listaPrazos"></div>
+                </section>
+
+                <section class="cartao-promocional">
+                    <span class="icone-promocional" aria-hidden="true">[ícone]</span>
+                    <h2>Seu aparelho<br>em boas mãos!</h2>
+                    <p>Qualidade e cuidado em cada atendimento.</p>
+                    <div class="ilustracao-aparelho" aria-hidden="true">
+                        [ícone do aparelho]
+                    </div>
+                </section>
+
+            </aside>
+
+        </section>
+
+        <!-- Modal de cadastro -->
+        <dialog id="modalAtendimento" class="modal-atendimento">
+            <form id="formAtendimento">
+
+                <div class="cabecalho-modal">
+                    <h2>Novo atendimento</h2>
+                    <button type="button" id="fecharModal" aria-label="Fechar">
+                        &times;
+                    </button>
+                </div>
+
+                <p>Preencha os dados do cliente e do aparelho.</p>
+
+                <label for="nomeCliente">Nome do cliente</label>
+                <input
+                    type="text"
+                    id="nomeCliente"
+                    name="cliente"
+                    maxlength="70"
+                    required
+                    placeholder="Ex.: Mariana"
+                >
+
+                <label for="nomeAparelho">Aparelho</label>
+                <input
+                    type="text"
+                    id="nomeAparelho"
+                    name="aparelho"
+                    maxlength="70"
+                    required
+                    placeholder="Ex.: Notebook Dell"
+                >
+
+                <label for="dataPrazo">Prazo de entrega</label>
+                <input type="date" id="dataPrazo" name="prazo" required>
+
+                <label for="statusAtendimento">Status</label>
+                <select id="statusAtendimento" name="status" required>
+                    <option value="recebido">Recebido</option>
+                    <option value="analise">Em análise</option>
+                    <option value="manutencao">Em manutenção</option>
+                    <option value="pronto">Pronto</option>
+                </select>
+
+                <label for="observacoes">Observações</label>
+                <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    rows="3"
+                    maxlength="240"
+                    placeholder="Descreva o problema do aparelho..."
+                ></textarea>
+
+                <div class="botoes-modal">
+                    <button type="button" id="cancelarModal" class="botao-cancelar">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="botao-novo">
+                        Cadastrar atendimento
+                    </button>
+                </div>
+
+            </form>
+        </dialog>
+
+        <!-- Mensagem de retorno -->
+        <div id="mensagemPainel" role="status" aria-live="polite"></div>
+
+    </main>
+
+    <script src="../js/painel-controle.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ServiceTech | Acompanhamento</title>
+
+    <!-- Conecta este arquivo ao CSS -->
+    <link rel="stylesheet" href="../css/registro-status.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO SUPERIOR -->
+    <header>
+        <div class="logo">
+            <h2>ServiceTech</h2>
+            <img src="../img/logo.jpg" alt="Logo ServiceTech">
+        </div>
+
+        <nav>
+            <a href="../index.html">
+                <img src="../img/inicio.png" alt=""> Início
+            </a>
+            <a href="../registro-status/registro-status.html">
+                <img src="../img/atendimento.png" alt=""> Meus Atendimentos
+            </a>
+            <a href="../index.html#servicos">
+                <img src="../img/sobre.png" alt=""> Sobre Nós
+            </a>
+            <a href="../login/login.html">
+                <img src="../img/login.png" alt=""> Login
+            </a>
+        </nav>
+    </header>
+
+
+    
+    <!-- MENU LATERAL -->
+    <aside class="barra-lateral">
+
+        <button class="item-menu" title="Início">⌂</button>
+        <button class="item-menu ativo" title="Atendimentos">▣</button>
+        <button class="item-menu" title="Pesquisar">⌕</button>
+        <button class="item-menu" title="Ajuda">?</button>
+        <button class="item-menu" title="Informações">ⓘ</button>
+
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo">
+
+        <section class="titulo-pagina">
+
+            <div class="icone-titulo">▣</div>
+
+            <div>
+                <h1>Acompanhamento do seu atendimento</h1>
+                <p>Veja as informações cadastradas e acompanhe o andamento do seu aparelho.</p>
+            </div>
+
+        </section>
+
+        <div class="layout-principal">
+
+            <!-- COLUNA ESQUERDA -->
+            <section class="coluna-principal">
+
+                <!-- SAUDAÇÃO -->
+                <div class="boas-vindas">
+
+                    <div class="desenho-boas-vindas">
+                        💻
+                        <span>✓</span>
+                    </div>
+
+                    <div>
+                        <h2 id="saudacao">Olá, Mariana!</h2>
+                        <p id="mensagem-status">Seu atendimento está em andamento</p>
+                    </div>
+
+                </div>
+
+                <!-- CARTÃO DO ATENDIMENTO -->
+                <section class="cartao atendimento">
+
+                    <div class="cabecalho-atendimento">
+
+                        <div class="icone-circular">💻</div>
+
+                        <div class="nome-atendimento">
+                            <h2 id="titulo-atendimento">Atendimento #001</h2>
+                            <p id="aparelho-titulo">Notebook Dell Inspiron</p>
+                        </div>
+
+                        <span class="etiqueta-status" id="status-topo">
+                            ◷ Em manutenção
+                        </span>
+
+                    </div>
+
+                    <!-- INFORMAÇÕES DO ATENDIMENTO -->
+                    <div class="detalhes">
+
+                        <div class="grupo-detalhes">
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">♙</span>
+                                <div>
+                                    <small>Cliente</small>
+                                    <p id="cliente">Mariana</p>
+                                </div>
+                            </div>
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">▱</span>
+                                <div>
+                                    <small>Aparelho</small>
+                                    <p id="aparelho">Notebook</p>
+                                </div>
+                            </div>
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">⚙</span>
+                                <div>
+                                    <small>Marca</small>
+                                    <p id="marca-aparelho">Dell</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grupo-detalhes">
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">▧</span>
+                                <div>
+                                    <small>Modelo</small>
+                                    <p id="modelo">Inspiron</p>
+                                </div>
+                            </div>
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">◉</span>
+                                <div>
+                                    <small>Problema relatado</small>
+                                    <p id="problema">Notebook não liga</p>
+                                </div>
+                            </div>
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">⚙</span>
+                                <div>
+                                    <small>Serviço solicitado</small>
+                                    <p id="servico">Diagnóstico</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="grupo-detalhes">
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">▦</span>
+                                <div>
+                                    <small>Data de entrada</small>
+                                    <p id="data">28/09/2026</p>
+                                </div>
+                            </div>
+
+                            <div class="detalhe">
+                                <span class="icone-detalhe">▤</span>
+                                <div>
+                                    <small>Observações</small>
+                                    <p id="observacoes">
+                                        Verificação do sistema e componentes internos.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- LINHA DO TEMPO -->
+                    <div class="linha-do-tempo">
+
+                        <div class="etapa concluida">
+                            <span class="circulo-etapa">✓</span>
+                            <strong>Recebido</strong>
+                            <small id="data-recebido">28/09/2026</small>
+                        </div>
+
+                        <div class="linha"></div>
+
+                        <div class="etapa concluida">
+                            <span class="circulo-etapa">✓</span>
+                            <strong>Em análise</strong>
+                            <small id="data-analise">28/09/2026</small>
+                        </div>
+
+                        <div class="linha linha-ativa"></div>
+
+                        <div class="etapa atual">
+                            <span class="circulo-etapa">◷</span>
+                            <strong>Em manutenção</strong>
+                            <small>Atual</small>
+                        </div>
+
+                        <div class="linha"></div>
+
+                        <div class="etapa pendente">
+                            <span class="circulo-etapa"></span>
+                            <strong>Pronto</strong>
+                            <small>Pendente</small>
+                        </div>
+
+                    </div>
+
+                    <!-- PREVISÃO DE RETIRADA -->
+                    <div class="previsao">
+
+                        <div class="icone-previsao">▦</div>
+
+                        <div>
+                            <small>Previsão / Retirada</small>
+                            <strong id="previsao-titulo">
+                                Aguardando conclusão do serviço
+                            </strong>
+                            <p id="previsao-texto">
+                                Quando estiver pronto, você será informado.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+            <!-- COLUNA DIREITA -->
+            <aside class="coluna-lateral">
+
+                <!-- RESUMO -->
+                <section class="cartao resumo">
+
+                    <h2>
+                        <span class="icone-cartao">▤</span>
+                        Resumo do atendimento
+                    </h2>
+
+                    <div class="linha-resumo">
+                        <span class="mini-icone">#</span>
+                        <span>Nº do atendimento</span>
+                        <strong id="resumo-id">#001</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span class="mini-icone">▱</span>
+                        <span>Aparelho</span>
+                        <strong id="resumo-aparelho">Notebook Dell Inspiron</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span class="mini-icone">♙</span>
+                        <span>Cliente</span>
+                        <strong id="resumo-cliente">Mariana</strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span class="mini-icone">◷</span>
+                        <span>Status atual</span>
+                        <strong>
+                            <span class="etiqueta-status pequena" id="resumo-status">
+                                ◷ Em manutenção
+                            </span>
+                        </strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span class="mini-icone">▦</span>
+                        <span>Data de entrada</span>
+                        <strong id="resumo-data">28/09/2026</strong>
+                    </div>
+
+                </section>
+
+                <!-- CONTATOS DE AJUDA -->
+                <section class="cartao ajuda">
+
+                    <h2>
+                        <span class="icone-ajuda">☏</span>
+                        Precisa de ajuda?
+                    </h2>
+
+                    <p>
+                        Em caso de dúvidas sobre o seu atendimento,
+                        entre em contato conosco.
+                    </p>
+
+                    <a class="contato" href="https://wa.me/5511987654321"
+                       target="_blank" rel="noopener">
+
+                        <span class="icone-contato">◉</span>
+
+                        <span>
+                            <strong>WhatsApp</strong>
+                            <small>(11) 98765-4321</small>
+                        </span>
+
+                        <span class="seta">›</span>
+
+                    </a>
+
+                    <a class="contato" href="mailto:suporte@servicetech.com.br">
+
+                        <span class="icone-contato">✉</span>
+
+                        <span>
+                            <strong>E-mail</strong>
+                            <small>suporte@servicetech.com.br</small>
+                        </span>
+
+                        <span class="seta">›</span>
+
+                    </a>
+
+                    <div class="desenho-ajuda">
+                        <span>▢</span>
+                        <p>Estamos aqui<br>para te ajudar!</p>
+                    </div>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+        <!-- RODAPÉ -->
+        <footer>
+            <strong>Service<span class="amarelo">Tech</span></strong>
+            <span>• Sistema de Gestão de Assistência Técnica</span>
+        </footer>
+
+    </main>
+
+    <!-- Conecta ao JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
