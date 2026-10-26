@@ -2,7 +2,7 @@
 // 1. DADOS INICIAIS
 // ========================================
 
-let atendimentos = [
+let atendimentos = JSON.parse(localStorage.getItem("atendimentos")) || [
     { id: 1, cliente: "Mariana", aparelho: "Notebook Dell", status: "recebido", prazo: "2026-10-21" },
     { id: 5, cliente: "João", aparelho: "iPhone 13", status: "recebido", prazo: "2026-10-22" },
     { id: 8, cliente: "Carlos", aparelho: "PC Gamer", status: "recebido", prazo: "2026-10-23" },
@@ -428,6 +428,8 @@ formulario.addEventListener("submit", event => {
         atendimentos.push(novoAtendimento);
         mostrarMensagem("Atendimento cadastrado com sucesso!");
     }
+
+    localStorage.setItem("atendimentos", JSON.stringify(atendimentos));
 
     formulario.reset();
     formulario.querySelector('button[type="submit"]').textContent = "Cadastrar atendimento";

@@ -9,7 +9,11 @@ const opcoesStatus = [
 fetch('status-atendimento.json')
     .then(res => res.json())
     .then(dados => {
-        document.getElementById('lista-atendimentos').innerHTML = dados.map(a => `
+        document.getElementById('lista-atendimentos').innerHTML = dados.map(a => {
+            const salvo = JSON.parse(localStorage.getItem(a.id));
+            if (salvo) Object.assign(a, salvo);
+
+            return `
             <tr class="item-${a.classe}">
                 <td>${a.id}</td>
                 <td>${a.cliente}</td>
@@ -35,7 +39,8 @@ fetch('status-atendimento.json')
                     </div>
                 </td>
             </tr>
-        `).join('');
+        `;
+        }).join('');
     });
 
 // Pesquisa por ID ou nome do cliente
@@ -74,6 +79,8 @@ function alterarStatus(botaoOpcao, novaClasse, novoTexto) {
     linha.className = `item-${novaClasse}`;
     etiqueta.className = `etiqueta-status ${novaClasse}`;
     etiqueta.textContent = novoTexto;
+
+    localStorage.setItem(linha.children[0].textContent, JSON.stringify({ classe: novaClasse, status: novoTexto }));
 
     menu.querySelectorAll('.opcao-status').forEach(btn => {
         btn.classList.toggle('ativo', btn.dataset.classe === novaClasse);

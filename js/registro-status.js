@@ -1,7 +1,13 @@
-/* CARREGAR OS DADOS DO JSON */
+/* CARREGAR OS DADOS DO JSON E LOCALSTORAGE */
 
 const parametrosUrl = new URLSearchParams(window.location.search);
-const chamadoPesquisado = parametrosUrl.get("chamado") ? parametrosUrl.get("chamado").trim() : "";
+const chamadoUrl = parametrosUrl.get("chamado") ? parametrosUrl.get("chamado").trim() : "";
+
+if (chamadoUrl) {
+    localStorage.setItem("chamado_pesquisado", chamadoUrl);
+}
+
+const chamadoPesquisado = chamadoUrl || localStorage.getItem("chamado_pesquisado") || "";
 
 fetch("dados.json")
     .then(function(resposta) {
@@ -15,6 +21,13 @@ fetch("dados.json")
         const idFormatado = chamadoPesquisado
             ? (chamadoPesquisado.startsWith("#") ? chamadoPesquisado : "#" + chamadoPesquisado)
             : dados.id;
+
+        const statusSalvo = JSON.parse(localStorage.getItem(idFormatado));
+        if (statusSalvo && statusSalvo.status) {
+            dados.status = statusSalvo.status;
+        }
+
+        localStorage.setItem("registro_status_dados", JSON.stringify(dados));
 
         // Informações principais do atendimento
         document.getElementById("saudacao").textContent =
